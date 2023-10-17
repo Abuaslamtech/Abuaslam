@@ -4,8 +4,8 @@ import { MdArticle } from "react-icons/md";
 
 const Home = () => {
   return (
-    <div className="flex flex-col overflow-auto lg:flex-row w-full h-full justify-center py-16 lg:py-0 px-4 lg:px-16">
-      <div className=" text-light flex flex-col w-full lg:w-[80%] gap-16 h-full justify-center lg:p-16">
+    <div className="flex flex-col  lg:flex-row w-full h-full justify-center lg:py-0 px-4 lg:px-16">
+      <div className="mt-16 lg:mt-0 overflow-auto py-16 lg:py-0 text-light flex flex-col w-full lg:w-[80%] gap-16 h-full justify-center lg:p-16">
         <div className="flex flex-col gap-3 w-full lg:w-[80%] ">
           <h2 className=" text-2xl lg:text-4xl font-bold">HI, I AM ABDULLAHI ISMAIL!</h2>
           <h2 className=" text-xl lg:text-4xl font-bold">
