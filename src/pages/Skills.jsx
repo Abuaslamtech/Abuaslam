@@ -3,7 +3,7 @@ import Core from "../components/Core";
 import Libraries from "../components/Libraries";
 import Versions from "../components/Versions";
 
-
+import {IoIosArrowDropdownCircle} from "react-icons/io"
 const Skills = () => {
   const [open, setOpen] = useState({
     core: true,
@@ -45,10 +45,12 @@ const Skills = () => {
           <div className="text-secondary">SKILLS</div>
         </div>
         {/* mobile */}
-        <div
-          className="lg:hidden bg-tertiary w-4 h-4 rounded-lg p-4 flex flex-col justify-end ml-auto"
+        <IoIosArrowDropdownCircle
+          className="lg:hidden  text-secondary  text-4xl bg-tertiary p-1 rounded-lg ml-auto"
           onClick={reset}
-        ></div>
+        />
+      
+    
         <div className="lg:hidden flex flex-col gap-8 w-full mx-auto bg-lblack p-4 rounded-lg ">
           <div
             onClick={() => handleOpen("core")}
