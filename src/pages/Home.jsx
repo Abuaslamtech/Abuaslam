@@ -42,7 +42,7 @@ const Home = () => {
               </button>
               <a className="w-full border-[1px] py-4 text-xl font-bold text-secondary text-center border-secondary hover:bg-secondary hover:text-primary">
                 <AiFillGithub className="inline text-secondarytext-2xl mr-4" />{" "}
-                Github
+                Github Repo
               </a>
             </div>
           </div>
