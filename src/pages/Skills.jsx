@@ -39,7 +39,7 @@ const Skills = () => {
     }
   };
   return (
-    <div className="flex flex-col lg:flex-row overflow-hidden w-full h-full justify-center px-4 lg:px-16">
+    <div className="flex flex-col lg:flex-row overflow-hidden w-full h-[100vh] justify-center px-4 lg:px-16">
       <div className=" text-light flex flex-col w-full lg:w-[80%] mt-16 gap-6 h-full justify-center lg:p-16">
         <div className="flex flex-col justify-center ">
           <div className="text-secondary">SKILLS</div>

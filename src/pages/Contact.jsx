@@ -14,7 +14,7 @@ const Contact = () => {
         <div className="flex flex-col justify-center ">
           <div className="text-secondary">CONTACT ME</div>
         </div>
-        <div className="flex flex-col gap-8 overflow-auto lg:pb-2 pb-32">
+        <div className="flex flex-col gap-8 overflow-auto lg:overflow-hidden lg:pb-2 pb-32">
           <div className="flex flex-col lg:flex-row gap-8  w-full">
             <div className="p-6 lg:w-[50%] font-bold flex flex-col gap-2 bg-lblack">
               <div className="text-4xl flex flex-row lg:justify-center  gap-2">
@@ -23,9 +23,9 @@ const Contact = () => {
               </div>
               <div className="flex flex-col gap-4">
                 <p className="text-center">Click the button to make a Call</p>
-                <p className="bg-secondary text-primary w-[50%] m-auto  font-bold text-center py-3 rounded-lg  text-sm">
+                <a href="tel:2347035974746" className="bg-secondary text-primary w-[50%] m-auto  font-bold text-center py-3 rounded-lg  text-sm">
                   Call
-                </p>
+                </a>
               </div>
             </div>
             <div className="p-6 lg:w-[50%] font-bold flex flex-col gap-2 bg-lblack">
@@ -37,9 +37,9 @@ const Contact = () => {
                 <p className="text-center">
                   Click the button to send a message
                 </p>
-                <p className="bg-secondary text-primary w-[50%] m-auto font-bold text-center py-3 rounded-lg text-sm">
+                <a href="https://wa.me/2347035974746" className="bg-secondary text-primary w-[50%] m-auto font-bold text-center py-3 rounded-lg text-sm">
                   Whatsapp
-                </p>
+                </a>
               </div>
             </div>
           </div>
@@ -73,30 +73,30 @@ const Contact = () => {
                 <h3>SOCIAL</h3>
               </div>
               <div className="flex flex-col justify-center gap-8 ">
-                <div className="flex flex-row items-center gap-8 p-4 border-[1px] border-tertiary rounded-lg hover:bg-secondary hover:text-primary">
+                <a href="https://github.com/abuaslamtech" className="flex flex-row items-center gap-8 p-4 border-[1px] border-tertiary rounded-lg hover:bg-secondary hover:text-primary">
                   <FaGithubSquare className="text-2xl" />
                   <div>
                     <p>Github</p>
                   </div>
-                </div>
-                <div className="flex flex-row items-center gap-8 p-4 border-[1px] border-tertiary rounded-lg hover:bg-secondary hover:text-primary">
+                </a>
+                <a href="https://linkedin.com/in/abdullahiabuaslam" className="flex flex-row items-center gap-8 p-4 border-[1px] border-tertiary rounded-lg hover:bg-secondary hover:text-primary">
                   <FaLinkedin className="text-2xl" />
                   <div>
                     <p>LinkedIn</p>
                   </div>
-                </div>
-                <div className="flex flex-row items-center gap-8 p-4 border-[1px] border-tertiary rounded-lg hover:bg-secondary hover:text-primary">
+                </a>
+                <a href="https://twitter.com/abdul_abuaslam" className="flex flex-row items-center gap-8 p-4 border-[1px] border-tertiary rounded-lg hover:bg-secondary hover:text-primary">
                   <FaTwitterSquare className="text-2xl" />
                   <div>
                     <p>Twitter</p>
                   </div>
-                </div>
-                <div className="flex flex-row items-center gap-8 p-4 border-[1px] border-tertiary rounded-lg hover:bg-secondary hover:text-primary">
+                </a>
+                <a href="https://facebook.com/abdullahiabuaslam" className="flex flex-row items-center gap-8 p-4 border-[1px] border-tertiary rounded-lg hover:bg-secondary hover:text-primary">
                   <FaFacebookSquare className="text-2xl" />
                   <div>
                     <p>Facebook</p>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </div>

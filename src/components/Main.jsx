@@ -9,7 +9,7 @@ import Contact from "../pages/Contact";
 
 const Main = () => {
   return (
-    <div className="w-[80%] h-full bg-primary">
+    <div className="w-[80%] h-full bg-primary ml-auto">
       <Routes>
         <Route exact path="/" element={<Home />}></Route>
         <Route exact path="/about" element={<About />}></Route>

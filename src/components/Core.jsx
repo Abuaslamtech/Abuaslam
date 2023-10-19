@@ -1,30 +1,25 @@
-    const Core = () => {
-        return ( 
-            <div className="flex flex-col lg:flex-row gap-6 w-full">
-          <div className="flex flex-row w-full justify-center items-center gap-4 bg-bb py-2  pr-4 border-r border-secondary">
-            <div className="bg-secondary py-6 p-4 text-primary font-bold text-md w-[30%]">HTML5</div>
-            <p className="w-[70%">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi,
-              voluptas!
-            </p>
-          </div>
-          <div className="flex flex-row w-full justify-center items-center gap-4 bg-bb py-2  pr-4 border-r border-secondary">
-            <div className="bg-secondary py-6 p-4 text-primary font-bold text-md w-[30%]">CSS3</div>
-            <p className="w-[70%]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi,
-              voluptas!
-            </p>
-          </div>
-          <div className="flex flex-row w-full justify-center items-center gap-4 bg-bb py-2  pr-4 border-r border-secondary">
-            <div className="bg-secondary py-6 p-4 text-primary font-bold text-md w-[30%] text-center">JS</div>
-            <p className="w-[70%]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi,
-              voluptas!
-            </p>
-          </div>
-          
-        </div>
-         );
-    }
-     
-    export default Core;
+import { ImHtmlFive } from "react-icons/im";
+import { BiSolidFileCss } from "react-icons/bi";
+import { SiJavascript } from "react-icons/si";
+import SkillsList from "./SkillsList";
+
+const Core = () => {
+  return (
+    <div className="grid lg:grid-cols-2 gap-6 w-full">
+      <SkillsList
+        ImHtmlFive={ImHtmlFive}
+        desc="I am skilled in HTML, proficient in creating and structuring web content using this fundamental language."
+      />
+      <SkillsList
+        ImHtmlFive={BiSolidFileCss}
+        desc=" I have expertise in CSS, adept at designing visually appealing and responsive web interfaces."
+      />
+      <SkillsList
+        ImHtmlFive={SiJavascript}
+        desc="JavaScript is one of my core skills, enabling me to create dynamic and interactive web applications."
+      />
+    </div>
+  );
+};
+
+export default Core;
