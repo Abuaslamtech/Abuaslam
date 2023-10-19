@@ -8,12 +8,12 @@ import untitled from "../assets/untitled.png";
 import Projects from "../components/Projects";
 const Portfolio = () => {
   return (
-    <div className="flex flex-col lg:flex-row  w-full h-full justify-center px-4 md:px-16">
-      <div className="w-full text-light flex flex-col  mt-16 gap-6 h-full justify-center md:p-16">
-        <div className="flex flex-col justify-center ">
+    <div className="flex flex-col overflow-hidden lg:flex-row  w-full h-full justify-center px-4 lg:px-16">
+    <div className="pb-8 text-light flex flex-col w-full  mt-16 gap-6 lg:gap-8 h-full justify-center lg:p-16">
+      <div className="flex flex-col justify-center ">
           <div className="text-secondary">PORTFOLIO</div>
         </div>
-        <div className="w-full h-full  py-16 ">
+        <div className="overflow-auto w-full h-full  py-16 ">
           <div className="pb-16 lg:relative w-full flex flex-col  justify-center items-center gap-16 text-light">
             <div className="flex flex-col lg:flex-row gap-16">
               <Projects

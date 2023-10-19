@@ -40,8 +40,8 @@ const Skills = () => {
   };
   return (
     <div className="flex flex-col overflow-hidden lg:flex-row  w-full h-full justify-center px-4 lg:px-16">
-      <div className="pb-8 text-light flex flex-col w-full  mt-16 gap-6 lg:gap-8 h-full justify-center lg:p-16">
-        <div className="flex flex-col justify-center ">
+    <div className="pb-8 text-light flex flex-col w-full  mt-16 gap-6 lg:gap-8 h-full justify-center lg:p-16">
+      <div className="flex flex-col justify-center ">
           <div className="text-secondary">SKILLS</div>
         </div>
         {/* mobile */}
@@ -51,7 +51,7 @@ const Skills = () => {
         />
       
     
-        <div className="lg:hidden flex flex-col gap-8 w-full mx-auto bg-lblack p-4 rounded-lg ">
+        <div className=" lg:hidden flex flex-col gap-8 w-full mx-auto bg-lblack p-4 rounded-lg ">
           <div
             onClick={() => handleOpen("core")}
             className={`${closec ? "block" : "hidden"}  ${

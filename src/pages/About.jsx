@@ -10,7 +10,7 @@ const About = () => {
         <div className="flex flex-col justify-center ">
           <div className="text-secondary">ABOUT ME</div>
         </div>
-        <div className="flex flex-col gap-8 pb-12">
+        <div className="overflow-auto flex flex-col gap-8 pb-12">
           <div className="bg-lblack p-4 flex flex-col gap-4">
             <div className="flex flex-row gap-4">
               <FaTreeCity className="text-4xl text-secondary" />

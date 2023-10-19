@@ -6,7 +6,7 @@ import { SiFirebase } from "react-icons/si";
 
 const Libraries = () => {
   return (
-    <div className="grid lg:grid-cols-2  gap-6 w-full">
+    <div className="overflow-auto pb-10 grid lg:grid-cols-2  gap-6 w-full">
       <SkillsList
         ImHtmlFive={GrReactjs}
         desc="I'm proficient in React, harnessing its capabilities to build  web applications."

@@ -11,7 +11,7 @@ const Home = () => {
     link.click();
   };
   return (
-    <div className="flex flex-col overflow-hidden lg:flex-row  w-full h-full justify-center px-4 lg:px-16">
+    <div className="flex flex-col overflow-hidden lg:flex-row  w-full h-full justify-center px-4 lg:px-16 pb-10">
     <div className="pb-8 text-light flex flex-col w-full  mt-16 gap-6 lg:gap-8 h-full justify-center lg:p-16">
       <div className="flex flex-col justify-center ">
           <h2 className=" text-2xl lg:text-4xl font-bold">
@@ -21,7 +21,7 @@ const Home = () => {
             A CREATIVE <span className="text-secondary">FRONTEND ENGINEER</span>
           </h2>
         </div>
-        <div className="flex flex-row overflow-auto w-full ">
+        <div className="flex flex-row overflow-auto w-full  ">
           <div className="flex flex-col gap-8 overflow-auto">
             <p className="mt-8 text-base lg:text-xl leading-7">
               As a frontend developer, my vision is to create user-centric,

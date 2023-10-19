@@ -5,7 +5,7 @@ import SkillsList from "./SkillsList";
 
 const Core = () => {
   return (
-    <div className="grid lg:grid-cols-2 gap-6 w-full">
+    <div className="overflow-auto grid lg:grid-cols-2 pb-10 gap-6 w-full">
       <SkillsList
         ImHtmlFive={ImHtmlFive}
         desc="I am skilled in HTML, proficient in creating and structuring web content using this fundamental language."
