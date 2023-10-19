@@ -30,7 +30,7 @@ const Navbar = () => {
      setClicked(newPages)
     }
   return (
-    <div className="fixed top-0 bottom-0  w-[20%]  lg:w-[20%]  h-full lg:h-[70%] lg:h-full  flex flex-col rounded-2xl lg:gap-16 bg-lblack">
+    <div className="fixed top-0 bottom-0  w-[20%]  lg:w-[20%]  h-full  lg:h-full  flex flex-col rounded-2xl lg:gap-16 bg-lblack">
       <div className="hidden bg-tertiary p-8 lg:flex justify-center items-center">
         <h2 className="text-5xl text-secondary font-bold">ABUASLAM</h2>
       </div>
