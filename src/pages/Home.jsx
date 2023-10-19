@@ -32,7 +32,7 @@ const Home = () => {
               inclusivity.
             </p>
 
-            <div className="flex flex-col lg:flex-row w-[90%] h-full lg:justify-around mx-auto gap-8 lg:gap-32 ">
+            <div className="flex flex-col lg:flex-row w-[90%] lg:justify-around mx-auto gap-8 lg:gap-32 ">
               <button
                 onClick={downloadfile}
                 className="bg-secondary text-primary hover:bg-primary hover:text-secondary hover:border-[1px] hover:border-secondary w-full py-4 text-xl font-bold"

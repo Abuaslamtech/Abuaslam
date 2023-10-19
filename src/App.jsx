@@ -5,7 +5,7 @@ import Main from './components/Main'
 function App() {
 
   return (
-    <div className='box-border font-nunito m-0 p-o w-full h-full bg-primary flex flex-row items-center'>
+    <div className='box-border font-nunito m-0 p-o w-full h-screen bg-primary flex flex-row items-center'>
       <Navbar />
       <Main />
     </div>
