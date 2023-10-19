@@ -11,9 +11,9 @@ const Home = () => {
     link.click();
   };
   return (
-    <div className="flex flex-col lg:flex-row overflow-auto  w-full h-screen justify-center px-4 md:px-16">
-      <div className=" text-light flex flex-col w-full lg:w-[80%] mt-16 gap-6 h-full justify-center lg:p-16">
-        <div className="flex flex-col justify-center ">
+    <div className="flex flex-col overflow-hidden lg:flex-row  w-full h-full justify-center px-4 lg:px-16">
+    <div className="pb-8 text-light flex flex-col w-full  mt-16 gap-6 lg:gap-8 h-full justify-center lg:p-16">
+      <div className="flex flex-col justify-center ">
           <h2 className=" text-2xl lg:text-4xl font-bold">
             HI, I AM ABDULLAHI ISMAIL!
           </h2>
