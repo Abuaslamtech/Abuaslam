@@ -1,6 +1,6 @@
 import dormsdeal from "../assets/dormsdeal.png";
 import classroom from "../assets/classroom.png";
-
+import current from "../assets/current.png"
 import annajat from "../assets/annajat.png";
 import impics from "../assets/impics.png";
 import untitled from "../assets/untitled.png";
@@ -30,7 +30,7 @@ const Portfolio = () => {
               />
               <Projects
                 name={"XCURRENT"}
-                pic={classroom}
+                pic={current}
                 demolink={"https://xcurrent.netlify.app"}
                 codelink={"https://github.com/abuaslamtech/xcurrent"}
               />
