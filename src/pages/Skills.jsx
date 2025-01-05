@@ -1,130 +1,142 @@
 import { useState } from "react";
-import Core from "../components/Core";
-import Libraries from "../components/Libraries";
-import Versions from "../components/Versions";
+import { IoIosArrowDropdownCircle } from "react-icons/io";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaNodeJs,
+  FaGitAlt,
+  FaGithub,
+} from "react-icons/fa";
+import {
+  SiMongodb,
+  SiExpress,
+  SiTailwindcss,
+  SiTypescript,
+  SiBitbucket,
+} from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
 
-import {IoIosArrowDropdownCircle} from "react-icons/io"
 const Skills = () => {
-  const [open, setOpen] = useState({
-    core: true,
-    lib: false,
-    ver: false,
-  });
-  const [closec, setClosec] = useState(true);
-  const [closev, setClosev] = useState(false);
-  const [closef, setClosef] = useState(false);
+  const skillCategories = [
+    {
+      id: "core",
+      title: "Core Technologies",
+      skills: [
+        { name: "HTML5", icon: FaHtml5, proficiency: 90 },
+        { name: "CSS3", icon: FaCss3Alt, proficiency: 85 },
+        { name: "JavaScript", icon: FaJs, proficiency: 88 },
+        { name: "TypeScript", icon: SiTypescript, proficiency: 80 },
+      ],
+    },
+    {
+      id: "lib",
+      title: "Libraries & Frameworks",
+      skills: [
+        { name: "React", icon: FaReact, proficiency: 85 },
+        { name: "Next.js", icon: TbBrandNextjs, proficiency: 82 },
+        { name: "Node.js", icon: FaNodeJs, proficiency: 80 },
+        { name: "Express", icon: SiExpress, proficiency: 75 },
+        { name: "MongoDB", icon: SiMongodb, proficiency: 78 },
+        { name: "TailwindCSS", icon: SiTailwindcss, proficiency: 88 },
+      ],
+    },
+    {
+      id: "ver",
+      title: "Version Control",
+      skills: [
+        { name: "Git", icon: FaGitAlt, proficiency: 85 },
+        { name: "GitHub", icon: FaGithub, proficiency: 88 },
+        // { name: "BitBucket", icon: SiBitbucket, proficiency: 75 },
+      ],
+    },
+  ];
 
-  const reset = () => {
-    setClosec(true);
-    setClosev(true);
-    setClosef(true);
-  };
-  const handleOpen = (oc) => {
-    const newState = { ...open };
-    newState[oc] = !newState[oc];
-    setOpen(newState);
+  const [activeCategory, setActiveCategory] = useState("core");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    if (oc == "core") {
-      setClosec(true);
-      setClosev(false);
-      setClosef(false);
-    } else if (oc == "lib") {
-      setClosec(false);
-      setClosev(false);
-      setClosef(true);
-    } else {
-      setClosec(false);
-      setClosev(true);
-      setClosef(false);
-    }
+  const handleCategoryChange = (categoryId) => {
+    setActiveCategory(categoryId);
+    setIsMenuOpen(false);
   };
-  return (
-    <div className="flex flex-col overflow-hidden lg:flex-row  w-full h-full justify-center px-4 lg:px-16">
-    <div className="pb-8 text-light flex flex-col w-full  mt-16 gap-6 lg:gap-8 h-full justify-center lg:p-16">
-      <div className="flex flex-col justify-center ">
-          <div className="text-secondary">SKILLS</div>
-        </div>
-        {/* mobile */}
-        <IoIosArrowDropdownCircle
-          className="lg:hidden  text-secondary  text-4xl bg-tertiary p-1 rounded-lg ml-auto"
-          onClick={reset}
+
+  const SkillBar = ({ name, icon: Icon, proficiency }) => (
+    <div className="flex flex-col gap-2 w-full">
+      <div className="flex items-center gap-3">
+        <Icon className="text-2xl text-secondary" />
+        <span className="font-medium">{name}</span>
+        <span className="ml-auto text-secondary">{proficiency}%</span>
+      </div>
+      <div className="w-full bg-primary/20 rounded-full h-2">
+        <div
+          className="bg-secondary h-full rounded-full transition-all duration-500 ease-out"
+          style={{ width: `${proficiency}%` }}
         />
-      
-    
-        <div className=" lg:hidden flex flex-col gap-8 w-full mx-auto bg-lblack p-4 rounded-lg ">
-          <div
-            onClick={() => handleOpen("core")}
-            className={`${closec ? "block" : "hidden"}  ${
-              closec ? "bg-primary" : "bg-secondary"
-            } ${
-              closec ? "text-secondary" : "text-primary"
-            } border-[1px] border-secondary p-4 font-bold`}
-          >
-            Core Technologies
-          </div>
-          <div
-            onClick={() => handleOpen("lib")}
-            className={`${closef ? "block" : "hidden"}  ${
-              closef ? "bg-primary" : "bg-secondary"
-            } ${
-              closef ? "text-secondary" : "text-primary"
-            } border-[1px] border-secondary p-4 font-bold`}
-          >
-            Libraries & Frameworks
-          </div>
-          <div
-            onClick={() => handleOpen("ver")}
-            className={`${closev ? "block" : "hidden"} ${
-              closev ? "bg-primary" : "bg-secondary"
-            } ${
-              closev ? "text-secondary" : "text-primary"
-            }  border-[1px] border-secondary  p-4 font-bold`}
-          >
-            Version Control
+      </div>
+    </div>
+  );
+
+  return (
+    <div className="flex flex-col lg:flex-row h-screen w-full justify-center px-4 lg:px-16">
+      <div className="pb-8 text-light flex flex-col w-full gap-4 h-full justify-center  py-4">
+        <div className="flex justify-between items-center">
+          <div className="text-secondary font-bold text-xl">SKILLS</div>
+          <IoIosArrowDropdownCircle
+            className="lg:hidden text-secondary text-4xl bg-tertiary p-1 rounded-lg cursor-pointer"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          />
+        </div>
+
+        {/* Mobile Menu */}
+        <div
+          className={`lg:hidden flex flex-col gap-2 ${
+            isMenuOpen ? "block" : "hidden"
+          }`}
+        >
+          {skillCategories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => handleCategoryChange(category.id)}
+              className="flex items-center justify-center gap-2 px-6 py-3 border-2 border-secondary text-secondary rounded-lg hover:bg-secondary/10 transition-all duration-300"
+            >
+              {category.title}
+            </button>
+          ))}
+        </div>
+
+        {/* Desktop Menu */}
+        <div className="hidden lg:flex gap-4">
+          {skillCategories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => handleCategoryChange(category.id)}
+              className={`p-4 font-bold rounded transition-all duration-300 ${
+                activeCategory === category.id
+                  ? "bg-secondary text-primary"
+                  : "bg-primary text-secondary border-[1px] border-secondary"
+              }`}
+            >
+              {category.title}
+            </button>
+          ))}
+        </div>
+
+        {/* Skills Display */}
+        <div className="bg-lblack p-8 rounded-lg">
+          <div className="grid gap-6">
+            {skillCategories
+              .find((category) => category.id === activeCategory)
+              ?.skills.map((skill, index) => (
+                <SkillBar
+                  key={index}
+                  name={skill.name}
+                  icon={skill.icon}
+                  proficiency={skill.proficiency}
+                />
+              ))}
           </div>
         </div>
-        {/* desktop */}
-        <div className="hidden lg:flex flex-row gap-8 w-full mx-auto p-4 rounded-lg ">
-          <div
-            onClick={() => handleOpen("core")}
-            className={`${closec ? "bg-secondary" : "bg-primary"} ${
-              closec ? "text-primary" : "text-secondary"
-            } ${closec ? "border-none" : "border-[1px]"} ${
-              closec ? "border-none" : "border-secondary"
-            } p-4 font-bold`}
-          >
-            Core Technologies
-          </div>
-          <div
-            onClick={() => handleOpen("lib")}
-            className={`${closef ? "bg-secondary" : "bg-primary"} ${
-              closef ? "text-primary" : "text-secondary"
-            } ${closef ? "border-none" : "border-[1px]"} ${
-              closef ? "border-none" : "border-secondary"
-            } p-4 font-bold`}
-          >
-            Libraries & Frameworks
-          </div>
-          <div
-            onClick={() => handleOpen("ver")}
-            className={`${closev ? "bg-secondary" : "bg-primary"} ${
-              closev ? "text-primary" : "text-secondary"
-            } ${closev ? "border-none" : "border-[1px]"} ${
-              closev ? "border-none" : "border-secondary"
-            } p-4 font-bold`}
-          >
-            Version Control
-          </div>
-        </div>
-        {closec ? (
-          <Core />
-        ) : closef ? (
-          <Libraries />
-        ) : closev ? (
-          <Versions />
-        ) : (
-          <Core />
-        )}
       </div>
     </div>
   );

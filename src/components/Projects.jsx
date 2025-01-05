@@ -1,50 +1,52 @@
-import { FaLaptopCode } from "react-icons/fa6";
-import { CgIfDesign } from "react-icons/cg";
-import { MdArticle } from "react-icons/md";
 import { useState } from "react";
 
-const Projects = ({name, desc, pic, demolink, codelink}) => {
-  const [demo, setDemo] = useState(true);
-  const [code, setCode] = useState(false);
+const Projects = ({ name, desc, pic, demolink, codelink }) => {
+  const [activeLink, setActiveLink] = useState("demo");
 
-  const handleClick = (btn) => {
-    if (btn == "demo") {
-      setDemo(true);
-      setCode(false);
-    } else {
-      setDemo(false);
-      setCode(true);
-    }
-  };
+  const links = [
+    { id: "demo", url: demolink, label: "Demo" },
+    { id: "code", url: codelink, label: "Code" },
+  ];
+
   return (
-    <div className="flex bg-lblack   w-full p-8 flex-col justify-around gap-2 hover:animate-pulse">
-      <img src={pic} className="text-8xl text-secondary" />
-      <h3 className="font-bold text-2xl">{name}</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis,
-        tempore.
-      </p>
-      <div className="flex flex-row justify-around items-center gap-4 w-full mt-4">
-        <a href={demolink}
-          onClick={() => handleClick("demo")}
-          className={`${demo ? "bg-secondary" : "bg-primary"} ${
-            demo ? "text-primary" : "text-secondary"
-          } ${demo ? "border-none" : "border-[1px]"} ${
-            demo ? "border-none" : "border-secondary"
-          } p-2 w-[50%] text-center`}
-        >
-          Demo
-        </a>
-        <a href={codelink}
-          onClick={() => handleClick("code")}
-          className={`${code ? "bg-secondary" : "bg-primary"} ${
-            code ? "text-primary" : "text-secondary"
-          } ${code ? "border-none" : "border-[1px]"} ${
-            code ? "border-none" : "border-secondary"
-          } p-2 w-[50%] text-center`}
-        >
-          Code
-        </a>
+    <div className="group bg-lblack p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-102 w-full max-w-2xl mx-auto">
+      <div className="w-full aspect-video overflow-hidden rounded-lg mb-4">
+        <img
+          src={pic}
+          className="w-full h-full object-cover object-center transform transition-transform duration-500 group-hover:scale-105"
+          alt={name}
+          loading="lazy"
+        />
+      </div>
+
+      <div className="space-y-3">
+        <h3 className="font-bold text-2xl text-secondary">{name}</h3>
+        <p className="text-base text-gray-300">
+          {desc || "No description available"}
+        </p>
+      </div>
+
+      <div className="flex gap-4 mt-4">
+        {links.map(({ id, url, label }) => (
+          <a
+            key={id}
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setActiveLink(id)}
+            className={`
+              flex-1 p-3 text-center rounded transition-all duration-200
+              hover:transform hover:-translate-y-1
+              ${
+                activeLink === id
+                  ? "bg-secondary text-primary font-semibold shadow-lg"
+                  : "bg-primary text-secondary border border-secondary hover:bg-secondary/10"
+              }
+            `}
+          >
+            {label}
+          </a>
+        ))}
       </div>
     </div>
   );

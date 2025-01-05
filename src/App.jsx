@@ -1,15 +1,13 @@
-
-import Navbar from './components/Navbar'
-import Main from './components/Main'
+import Navbar from "./components/Navbar";
+import Main from "./components/Main";
 
 function App() {
-
   return (
-    <div className='box-border font-nunito m-0 p-o w-full h-screen bg-primary flex flex-row items-center'>
+    <div className="h-full font-nunito bg-primary flex flex-row items-center">
       <Navbar />
       <Main />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

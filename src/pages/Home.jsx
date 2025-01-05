@@ -1,53 +1,90 @@
+import { useState } from "react";
 import abuaslam from "../assets/abuaslam.png";
 import { AiFillGithub } from "react-icons/ai";
 import { MdArticle } from "react-icons/md";
+import { FaLinkedin } from "react-icons/fa";
 
 const Home = () => {
-  const downloadfile = () => {
-    let path = "../assets/resume.pdf";
-    const link = document.createElement("a");
-    link.href = path;
-    link.download = "resume.pdf";
-    link.click();
+  const [isDownloading, setIsDownloading] = useState(false);
+
+  const downloadResume = async () => {
+    try {
+      setIsDownloading(true);
+      const response = await fetch("/assets/resume.pdf");
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "AbdullahiIsmail_Resume.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error("Error downloading resume:", error);
+    } finally {
+      setIsDownloading(false);
+    }
   };
+
   return (
-    <div className="flex flex-col overflow-hidden lg:flex-row  w-full h-full justify-center px-4 lg:px-16 pb-10">
-    <div className="pb-8 text-light flex flex-col w-full  mt-16 gap-6 lg:gap-8 h-full justify-center lg:p-16">
-      <div className="flex flex-col justify-center ">
-          <h2 className=" text-2xl lg:text-4xl font-bold">
+    <div className="flex flex-col h-screen w-full justify-center px-4 lg:px-16">
+      <div className="pb-8 text-light flex flex-col w-full gap-8 h-full justify-center py-4">
+        <div className="space-y-4">
+          <h1 className="text-3xl lg:text-5xl font-bold text-light">
             HI, I AM ABDULLAHI ISMAIL!
-          </h2>
-          <h2 className=" text-xl lg:text-4xl font-bold">
-            A CREATIVE <span className="text-secondary">FRONTEND ENGINEER</span>
+          </h1>
+          <h2 className="text-2xl lg:text-4xl font-bold text-light">
+            FULL STACK DEVELOPER
+            <span className="text-secondary"> SPECIALIZED IN MERN</span>
           </h2>
         </div>
-        <div className="flex flex-row overflow-auto w-full  ">
-          <div className="flex flex-col gap-8 overflow-auto">
-            <p className="mt-8 text-base lg:text-xl leading-7">
-              As a frontend developer, my vision is to create user-centric,
-              innovative, and accessible web interfaces that seamlessly merge
-              functionality and aesthetics. <br /> <br />I aspire to inspire
-              teams to build immersive and delightful digital experiences,
-              staying at the forefront of emerging technologies and fostering
-              inclusivity.
-            </p>
 
-            <div className="flex flex-col lg:flex-row w-[90%] lg:justify-around mx-auto gap-8 lg:gap-32 ">
-              <button
-                onClick={downloadfile}
-                className="bg-secondary text-primary hover:bg-primary hover:text-secondary hover:border-[1px] hover:border-secondary w-full py-4 text-xl font-bold"
-              >
-                <MdArticle className="inline text-primarytext-2xl mr-4" />{" "}
-                Resume
-              </button>
-              <a className="w-full border-[1px] py-4 text-xl font-bold text-secondary text-center border-secondary hover:bg-secondary hover:text-primary">
-                <AiFillGithub className="inline text-secondarytext-2xl mr-4" />{" "}
-                Github Repo
-              </a>
-            </div>
-          </div>
-          <div className=" hidden lg:flex flex-col w-full justify-center items-center m-auto">
-            <img src={abuaslam} alt="" />
+        <div className="prose prose-lg text-light">
+          <p className="text-base lg:text-xl leading-relaxed">
+            I'm a passionate Full Stack Developer with expertise in the MERN
+            stack (MongoDB, Express.js, React, Node.js). With a strong
+            foundation in frontend development, I create responsive and
+            intuitive user interfaces while maintaining robust backend
+            architectures.
+            <br />
+            <br />
+            My focus is on building scalable web applications that deliver
+            exceptional user experiences through clean code, modern design
+            patterns, and performance optimization.
+          </p>
+        </div>
+
+        <div className="flex flex-col lg:flex-row gap-6 w-full max-w-2xl">
+          <button
+            onClick={downloadResume}
+            disabled={isDownloading}
+            className="flex items-center justify-center gap-2 px-6 py-3 bg-secondary text-primary rounded-lg hover:bg-secondary/90 transition-all duration-300"
+          >
+            <MdArticle className="text-2xl" />
+            {isDownloading ? "Downloading..." : "Download Resume"}
+          </button>
+
+          <div className="flex gap-4">
+            <a
+              href="https://github.com/abuaslamtech"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 px-6 py-3 border-2 border-secondary text-secondary rounded-lg hover:bg-secondary/10 transition-all duration-300"
+            >
+              <AiFillGithub className="text-2xl" />
+              GitHub
+            </a>
+
+            <a
+              href="https://linkedin.com/in/abdullahabuaslam"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 px-6 py-3 border-2 border-secondary text-secondary rounded-lg hover:bg-secondary/10 transition-all duration-300"
+            >
+              <FaLinkedin className="text-2xl" />
+              LinkedIn
+            </a>
           </div>
         </div>
       </div>

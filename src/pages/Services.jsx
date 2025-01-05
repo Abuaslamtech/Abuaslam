@@ -1,40 +1,85 @@
-import { FaLaptopCode } from "react-icons/fa6";
-import { CgIfDesign } from "react-icons/cg";
-import { MdArticle } from "react-icons/md";
+import { FaLaptopCode, FaServer, FaEthereum } from "react-icons/fa";
+import { BiCodeAlt } from "react-icons/bi";
+import { TbApi } from "react-icons/tb";
+import { SiBlockchaindotcom } from "react-icons/si";
+
 const Services = () => {
+  const services = [
+    {
+      icon: FaLaptopCode,
+      title: "FRONTEND DEVELOPMENT",
+      description:
+        "Building responsive, interactive web applications using React, Next.js, and modern CSS frameworks. Specializing in performance optimization and creating seamless user experiences.",
+      skills: ["React", "Next.js", "TailwindCSS", "TypeScript"],
+    },
+    {
+      icon: FaServer,
+      title: "FULLSTACK DEVELOPMENT",
+      description:
+        "End-to-end application development using the MERN stack (MongoDB, Express.js, React, Node.js). Creating scalable APIs and managing database architecture.",
+      skills: ["Node.js", "Express", "MongoDB", "REST APIs"],
+    },
+    {
+      icon: FaEthereum,
+      title: "WEB3 DEVELOPMENT",
+      description:
+        "Developing decentralized applications (dApps) using Ethereum and other blockchain technologies. Smart contract development and integration with frontend applications.",
+      skills: ["Solidity", "Web3.js", "Smart Contracts", "dApps"],
+    },
+    {
+      icon: TbApi,
+      title: "API DEVELOPMENT",
+      description:
+        "Designing and implementing RESTful APIs with Node.js and Express. Creating secure endpoints and handling data validation and authentication.",
+      skills: ["REST", "GraphQL", "JWT", "API Security"],
+    },
+    // {
+    //   icon: SiBlockchaindotcom,
+    //   title: "BLOCKCHAIN INTEGRATION",
+    //   description:
+    //     "Integrating blockchain technologies with web applications. Implementing wallet connections and smart contract interactions.",
+    //   skills: ["MetaMask", "Smart Contracts", "Token Standards", "Web3"],
+    // },
+  ];
+
   return (
-    <div className="flex flex-col lg:flex-row overflow-hidden w-full h-screen justify-center px-4 md:px-16">
-      <div className="w-full text-light flex flex-col  mt-16 gap-6 h-full justify-center md:p-16">
-        <div className="flex flex-col justify-center ">
-          <div className="text-secondary">SERVICES</div>
+    <div className="flex flex-col w-full justify-center px-4 lg:px-16">
+      <div className="pb-8 text-light flex flex-col w-full gap-8 h-full justify-center py-4">
+        <div className="flex flex-col justify-center">
+          <p className="text-secondary font-bold text-xl">SERVICES</p>
         </div>
-        <div className="w-full  overflow-auto py-16">
-          <div className=" lg:relative w-full flex flex-col lg:flex-row  justify-center items-center gap-8 text-light">
-            <div className="flex bg-lblack  h-[30%] p-8 flex-col justify-around gap-2 hover:animate-pulse">
-              <FaLaptopCode className="text-8xl text-secondary" />
-              <h3 className="font-bold text-2xl">WEB DEVELOPMENT</h3>
-              <p>
-              I create visually appealing and user-friendly websites by crafting responsive designs and seamless user interfaces, enhancing the digital experience for clients and their customers.
-              </p>
-            </div>
-            <div className="lg:relative lg:bottom-20 flex  bg-lblack h-[30%] p-8 flex-col justify-around gap-2 hover:animate-pulse">
-              <CgIfDesign className="text-8xl text-secondary" />
-              <h3 className="font-bold text-2xl">GRAPHIC DESIGN</h3>
-              <p>
-              I specialize in graphic design, transforming ideas into captivating visuals through creative use of typography, imagery, and layout.
-              </p>
-            </div>
-            <div className="flex bg-lblack h-[30%] p-8 flex-col justify-around gap-2 hover:animate-pulse">
-              <MdArticle className="text-8xl text-secondary" />
-              <h3 className="font-bold text-2xl">CONTENT CREATION</h3>
-              <p>
-              I'm a dedicated blogger, crafting informative and engaging articles across a variety of topics, aiming to inform, entertain, and inspire readers.
-              </p>
-            </div>
+        <div className="w-full overflow-auto py-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="bg-lblack p-8 flex flex-col gap-6 rounded-lg hover:transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
+              >
+                <service.icon className="text-6xl text-secondary" />
+                <div className="space-y-4">
+                  <h3 className="font-bold text-xl">{service.title}</h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    {service.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 pt-4">
+                    {service.skills.map((skill, skillIndex) => (
+                      <span
+                        key={skillIndex}
+                        className="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-          <button className="mt-16 text-light flex items-center justify-center m-auto border-[1px] border-secondary w-40 p-4 hover:bg-secondary hover:text-primary font-bold">
-            Load More
-          </button>
+          <div className="flex justify-center mt-12">
+            <button className="border-2 border-secondary px-8 py-3 rounded-lg hover:bg-secondary hover:text-primary transition-all duration-300 font-semibold text-light">
+              View All Services
+            </button>
+          </div>
         </div>
       </div>
     </div>
