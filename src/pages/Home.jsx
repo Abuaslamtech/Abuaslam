@@ -28,8 +28,8 @@ const Home = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen w-full justify-center px-4 lg:px-16">
-      <div className="pb-8 text-light flex flex-col w-full gap-8 h-full justify-center py-4">
+    <div className="flex flex-col lg:flex-row h-full lg:h-screen w-full justify-center px-4 lg:px-16 border-2 border-red-700">
+      <div className="pb-8 text-light flex flex-col w-full gap-4 h-full justify-center py-4">
         <div className="space-y-4">
           <h1 className="text-3xl lg:text-5xl font-bold text-light">
             HI, I AM ABDULLAHI ISMAIL!

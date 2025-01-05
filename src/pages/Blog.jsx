@@ -1,12 +1,12 @@
-import React from "react";
-import { FiClock, FiBell } from "react-icons/fi";
-import { FaNewspaper } from "react-icons/fa";
+import React from 'react';
+import { FiClock, FiBell } from 'react-icons/fi';
+import { FaNewspaper } from 'react-icons/fa';
 import soon from "../assets/soon.svg";
 
 const Blog = () => {
   return (
-    <div className="flex flex-col lg:flex-row w-full justify-center px-4 lg:px-16">
-      <div className="pb-8 text-light flex flex-col w-full gap-4 h-full justify-center  py-4">
+    <div className="flex flex-col w-full min-h-screen justify-center px-4 lg:px-16">
+      <div className="pb-8 text-light flex flex-col w-full gap-6 lg:gap-8 justify-center lg:p-16">
         <div className="flex items-center gap-3 mb-8">
           <FaNewspaper className="text-2xl text-secondary" />
           <h2 className="text-secondary font-bold text-xl">MY BLOG</h2>
@@ -45,32 +45,28 @@ const Blog = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12 w-full max-w-3xl">
-            {["Web Development", "Tech Trends", "Coding Tutorials"].map(
-              (topic, index) => (
-                <div
-                  key={index}
-                  className="bg-lblack p-6 rounded-lg text-center hover:transform hover:scale-105 transition-all duration-300"
-                >
-                  <h3 className="text-secondary font-bold mb-2">{topic}</h3>
-                  <p className="text-gray-400">Coming soon</p>
-                </div>
-              )
-            )}
+            {['Web Development', 'Tech Trends', 'Coding Tutorials'].map((topic, index) => (
+              <div
+                key={index}
+                className="bg-lblack p-6 rounded-lg text-center hover:transform hover:scale-105 transition-all duration-300"
+              >
+                <h3 className="text-secondary font-bold mb-2">
+                  {topic}
+                </h3>
+                <p className="text-gray-400">
+                  Coming soon
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
 
       <style jsx>{`
         @keyframes float {
-          0% {
-            transform: translateY(0px);
-          }
-          50% {
-            transform: translateY(-20px);
-          }
-          100% {
-            transform: translateY(0px);
-          }
+          0% { transform: translateY(0px); }
+          50% { transform: translateY(-20px); }
+          100% { transform: translateY(0px); }
         }
         .animate-float {
           animation: float 6s ease-in-out infinite;
