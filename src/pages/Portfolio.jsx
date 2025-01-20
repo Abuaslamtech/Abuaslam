@@ -17,15 +17,15 @@ const projectData = [
     name: "IMPICS",
     description: "Image free gallery with AI Generation feature",
     pic: impics,
-    demolink: "https://talkmute-project.vercel.app/",
-    codelink: "https://github.com/Abuaslamtech/talkmute",
+    demolink: "https://impics.vercel.app/",
+    codelink: "https://github.com/Abuaslamtech/impics",
   },
   {
     id: "talkmute",
     name: "TALKMUTE",
     description: "A text to speech to sign language translation software",
     pic: talkmute,
-    demolink: "https://dormsdeal.netlify.app",
+    demolink: "https://talkmute-project.vercel.app/",
     codelink: "https://github.com/Abuaslamtech/talkmute-project",
   },
   {
