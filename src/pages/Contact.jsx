@@ -41,17 +41,17 @@ const Contact = () => {
     {
       icon: FaLinkedin,
       name: "LinkedIn",
-      link: "https://linkedin.com/in/abdullahabuaslam",
+      link: "https://linkedin.com/in/abuaslamtech",
     },
     {
       icon: FaTwitterSquare,
       name: "Twitter",
-      link: "https://twitter.com/abdul_abuaslam",
+      link: "https://twitter.com/abuaslamtech",
     },
     {
       icon: FaFacebookSquare,
       name: "Facebook",
-      link: "https://facebook.com/abdullahiabuaslam",
+      link: "https://facebook.com/abuaslamtech",
     },
   ];
 

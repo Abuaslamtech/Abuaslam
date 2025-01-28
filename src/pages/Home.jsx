@@ -77,7 +77,7 @@ const Home = () => {
             </a>
 
             <a
-              href="https://linkedin.com/in/abdullahabuaslam"
+              href="https://linkedin.com/in/abuaslamtech"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 px-6 py-3 border-2 border-secondary text-secondary rounded-lg hover:bg-secondary/10 transition-all duration-300"

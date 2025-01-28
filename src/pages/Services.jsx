@@ -10,29 +10,38 @@ const Services = () => {
       title: "FRONTEND DEVELOPMENT",
       description:
         "Building responsive, interactive web applications using React, Next.js, and modern CSS frameworks. Specializing in performance optimization and creating seamless user experiences.",
-      skills: ["React", "Next.js", "TailwindCSS", "TypeScript"],
+      skills: ["React", "Next.js", "TailwindCSS", "ES6"],
+    },
+    {
+      icon: TbApi,
+      title: "BACKEND DEVELOPMENT",
+      description:
+        "Designing and implementing RESTful APIs with Node.js and Express. Creating secure endpoints and handling data validation and authentication.",
+      skills: ["REST", "NODE", "EXPRESS", "JWT"],
     },
     {
       icon: FaServer,
       title: "FULLSTACK DEVELOPMENT",
       description:
         "End-to-end application development using the MERN stack (MongoDB, Express.js, React, Node.js). Creating scalable APIs and managing database architecture.",
-      skills: ["Node.js", "Express", "MongoDB", "REST APIs"],
+      skills: [
+        "REACT",
+        "TAILWIND",
+        "BOOSTRAP",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "REST APIs",
+      ],
     },
-    {
-      icon: FaEthereum,
-      title: "WEB3 DEVELOPMENT",
-      description:
-        "Developing decentralized applications (dApps) using Ethereum and other blockchain technologies. Smart contract development and integration with frontend applications.",
-      skills: ["Solidity", "Web3.js", "Smart Contracts", "dApps"],
-    },
-    {
-      icon: TbApi,
-      title: "API DEVELOPMENT",
-      description:
-        "Designing and implementing RESTful APIs with Node.js and Express. Creating secure endpoints and handling data validation and authentication.",
-      skills: ["REST", "GraphQL", "JWT", "API Security"],
-    },
+    // {
+    //   icon: FaEthereum,
+    //   title: "WEB3 DEVELOPMENT",
+    //   description:
+    //     "Developing decentralized applications (dApps) using Ethereum and other blockchain technologies. Smart contract development and integration with frontend applications.",
+    //   skills: ["Solidity", "Web3.js", "Smart Contracts", "dApps"],
+    // },
+
     // {
     //   icon: SiBlockchaindotcom,
     //   title: "BLOCKCHAIN INTEGRATION",

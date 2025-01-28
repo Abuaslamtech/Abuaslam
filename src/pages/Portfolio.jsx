@@ -12,6 +12,14 @@ import untitled from "../assets/untitled.png";
 const PROJECTS_PER_PAGE = 6;
 
 const projectData = [
+    {
+    id: "Climap",
+    name: "CLIMAP",
+    description: "A health facility locator across Nigeria",
+    pic: climap,
+    demolink: "https://cli-map.vercel.app/",
+    codelink: "http://github.com/abuaslamtech/climap",
+  },
   {
     id: "impics",
     name: "IMPICS",
@@ -27,14 +35,6 @@ const projectData = [
     pic: talkmute,
     demolink: "https://talkmute-project.vercel.app/",
     codelink: "https://github.com/Abuaslamtech/talkmute-project",
-  },
-  {
-    id: "Climap",
-    name: "CLIMAP",
-    description: "A health facility locator across Nigeria",
-    pic: climap,
-    demolink: "https://cli-map.vercel.app/",
-    codelink: "http://github.com/abuaslamtech/climap",
   },
   {
     id: "usersmanager",

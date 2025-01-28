@@ -35,7 +35,7 @@ const Skills = () => {
       title: "Libraries & Frameworks",
       skills: [
         { name: "React", icon: FaReact, proficiency: 85 },
-        { name: "Next.js", icon: TbBrandNextjs, proficiency: 82 },
+        { name: "Next.js", icon: TbBrandNextjs, proficiency: 50 },
         { name: "Node.js", icon: FaNodeJs, proficiency: 80 },
         { name: "Express", icon: SiExpress, proficiency: 75 },
         { name: "MongoDB", icon: SiMongodb, proficiency: 78 },
