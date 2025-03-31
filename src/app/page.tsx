@@ -65,8 +65,10 @@ export default function Home() {
                   waitUntilVisible: true,
                   cursor: false, // Remove cursor when done
                   afterComplete: () => {
-                    document.querySelector(".second-typeit").style.visibility =
-                      "visible";
+                    const element = document.querySelector(".second-typeit");
+                    if (element) {
+                      (element as HTMLElement).style.visibility = "visible";
+                    }
                   },
                 }}
               >
@@ -80,7 +82,7 @@ export default function Home() {
 
             <h2
               className="text-2xl lg:text-3xl font-bold text-light/90 relative"
-              style={{ visibility: "hidden", startDelay: 500 }}
+              style={{ visibility: "hidden" }}
             >
               <span className="relative second-typeit">
                 <TypeIt

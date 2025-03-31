@@ -54,7 +54,7 @@ const Skills = () => {
     },
   ];
 
-  const [activeCategory, setActiveCategory] = useState("core");
+  const [activeCategory, setActiveCategory] = useState<string | number>("core");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [animateSkills, setAnimateSkills] = useState(false);
@@ -85,15 +85,21 @@ const Skills = () => {
     }, 100);
   }, [activeCategory]);
 
-  const handleCategoryChange = (categoryId) => {
+  const handleCategoryChange = (categoryId:number|string) => {
     setActiveCategory(categoryId);
     setIsMobileMenuOpen(false);
   };
 
   // Modern compact skill card component
-  const SkillCard = ({ name, icon: Icon, proficiency, index }) => {
+  type skillCardType = {
+    name: string;
+    icon: any;
+    proficiency: number;
+    index: number;
+  }
+  const SkillCard = ({ name, icon: Icon, proficiency, index }:skillCardType) => {
     // Determine proficiency level text
-    const getProficiencyText = (level) => {
+    const getProficiencyText = (level:number) => {
       if (level >= 85) return "Expert";
       if (level >= 70) return "Advanced";
       if (level >= 50) return "Intermediate";

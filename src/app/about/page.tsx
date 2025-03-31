@@ -6,8 +6,9 @@ import {
   Library,
   Award,
   BadgeCheck,
+  LucideIcon,
 } from "lucide-react";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import Navbar from "../components/Navbar";
 
 const About = () => {
@@ -66,8 +67,12 @@ const About = () => {
       link: "https://coursera.org/verify/abc", // Replace with actual verification link
     },
   ];
-
-  const TabItem = ({ id, label, icon: Icon }) => (
+  type tabitems = {
+    id: string;
+    label: string;
+    icon: LucideIcon;
+  };
+  const TabItem = ({ id, label, icon: Icon }: tabitems) => (
     <button
       onClick={() => setActiveTab(id)}
       className={`flex items-center gap-2 px-4 py-3 rounded-md transition-all duration-300 ${
@@ -84,14 +89,21 @@ const About = () => {
       <span>{label}</span>
     </button>
   );
-
-  const CardWrapper = ({ children }) => (
+  type childrenWrapperType = {
+    children: ReactNode;
+  };
+  const CardWrapper = ({ children }: childrenWrapperType) => (
     <div className="bg-lblack/80 backdrop-blur-md rounded-xl p-6 shadow-lg border-l-4 border-secondary transform transition-all duration-300 hover:translate-y-1">
       {children}
     </div>
   );
-
-  const CredentialItem = ({ title, subtitle, year, link }) => (
+  type credentialType = {
+    title: string;
+    subtitle: string;
+    year: string;
+    link: string;
+  };
+  const CredentialItem = ({ title, subtitle, year, link }: credentialType) => (
     <a
       href={link}
       target="_blank"
@@ -175,7 +187,7 @@ const About = () => {
                     <Library className="text-3xl text-secondary" />
                   </div>
                   <h3 className="w-1/2 text-2xl md:text-3xl font-bold mb-4 text-secondary">
-                    Education 
+                    Education
                   </h3>
 
                   <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4">

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import {
   Phone,
   MessageSquare,
@@ -14,11 +14,16 @@ import {
   ArrowRight,
   MapPin,
   Link,
+  LucideIcon,
 } from "lucide-react";
 import Navbar from "../components/Navbar";
 
 // Components for better maintainability
-const SectionHeading = ({ children, icon: Icon }) => (
+type sectionHeadingType = {
+  children: ReactNode;
+  icon: LucideIcon;
+};
+const SectionHeading = ({ children, icon: Icon }: sectionHeadingType) => (
   <div className="flex items-center gap-3 mb-6">
     <div className="bg-tertiary/20 rounded-full py-2 px-4 inline-flex items-center">
       {Icon && <Icon className="text-secondary mr-2 h-5 w-5" />}
@@ -28,13 +33,20 @@ const SectionHeading = ({ children, icon: Icon }) => (
   </div>
 );
 
+type ContactCardType = {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  actionText: string;
+  actionLink: string;
+};
 const ContactCard = ({
   icon: Icon,
   title,
   description,
   actionText,
   actionLink,
-}) => (
+}: ContactCardType) => (
   <div className="md:w-1/3 bg-lblack/80 backdrop-blur-sm p-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-tertiary/10 border border-tertiary/10 group hover:border-tertiary/30">
     <div className="flex flex-col gap-4 items-center">
       <div className="bg-tertiary/10 p-4 rounded-full group-hover:bg-secondary/20 transition-all duration-300">
@@ -53,7 +65,12 @@ const ContactCard = ({
   </div>
 );
 
-const SocialLink = ({ icon: Icon, name, link }) => (
+type SocialLinkType = {
+    icon: LucideIcon;
+    name: string;
+    link: string;
+}
+const SocialLink = ({ icon: Icon, name, link }:SocialLinkType) => (
   <a
     href={link}
     target="_blank"
@@ -75,9 +92,9 @@ const ContactForm = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null);
+  const [submitStatus, setSubmitStatus] = useState <string | null>(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
@@ -91,7 +108,7 @@ const ContactForm = () => {
     }, 1000);
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e:React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
