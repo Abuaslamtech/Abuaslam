@@ -1,103 +1,210 @@
-import Image from "next/image";
+"use client";
+import Navbar from "./components/Navbar";
+import { useEffect, useRef, useState } from "react";
+import { ChevronDown, FileText, Github, Linkedin } from "lucide-react";
+import TypeIt from "typeit-react";
+import CountUp from "react-countup";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [isDownloading, setIsDownloading] = useState(false);
+  const [typing, setTyping] = useState({
+    text: "",
+    isComplete: false,
+    currentIndex: 0,
+  });
+  const fullText = "FULL STACK DEVELOPER SPECIALIZED IN MERN";
+  const greeting = "HI, I AM ABDULLAHI ISMAIL";
+  const sectionRef = useRef(null);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const downloadResume = async () => {
+    try {
+      setIsDownloading(true);
+      const response = await fetch("/assets/resume.pdf");
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "AbdullahiIsmail_Resume.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error("Error downloading resume:", error);
+    } finally {
+      setIsDownloading(false);
+    }
+  };
+
+  const scrollDown = () => {
+    if (sectionRef.current) {
+      window.scrollTo({
+        top: window.innerHeight,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  return (
+    <div>
+      <Navbar />
+      <div
+        ref={sectionRef}
+        className="relative flex flex-col w-full justify-center items-center pt-8 md:pt-32 bg-bb px-4 lg:px-0"
+      >
+        {/* Main content */}
+        <div className="relative z-10 pb-8 text-light flex flex-col w-full md:w-4/5 lg:w-3/5 gap-6 h-full justify-center py-4 mt-16 lg:mt-0">
+          <div className="space-y-6">
+            <div className="inline-block bg-tertiary/20 rounded-lg px-4 py-2 text-secondary text-sm backdrop-blur-sm border border-tertiary/30 shadow-lg transform hover:scale-105 transition-transform">
+              Welcome to my digital space
+            </div>
+
+            <h1 className="text-3xl lg:text-6xl font-bold text-light leading-tight">
+              <TypeIt
+                options={{
+                  waitUntilVisible: true,
+                  cursor: false, // Remove cursor when done
+                  afterComplete: () => {
+                    document.querySelector(".second-typeit").style.visibility =
+                      "visible";
+                  },
+                }}
+              >
+                HI, I AM{" "}
+                <span className="text-secondary relative inline-block">
+                  ABDULLAHI ISMAIL!
+                  <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-secondary to-transparent"></span>
+                </span>
+              </TypeIt>
+            </h1>
+
+            <h2
+              className="text-2xl lg:text-3xl font-bold text-light/90 relative"
+              style={{ visibility: "hidden", startDelay: 500 }}
+            >
+              <span className="relative second-typeit">
+                <TypeIt
+                  options={{
+                    waitUntilVisible: true,
+                  }}
+                >
+                  FULL STACK DEVELOPER SPECIALIZED IN MERN
+                </TypeIt>
+              </span>
+            </h2>
+          </div>
+
+          <div className="prose prose-lg text-light max-w-full my-6">
+            <div className="text-base lg:text-xl leading-relaxed backdrop-blur-md bg-lblack/30 p-6 rounded-lg border-l-4 border-secondary shadow-xl">
+              <p className="mb-4">
+                I'm a passionate Full Stack Developer with expertise in the MERN
+                stack (MongoDB, Express.js, React, Node.js). With a strong
+                foundation in frontend development, I create responsive and
+                intuitive user interfaces while maintaining robust backend
+                architectures.
+              </p>
+              <p>
+                My focus is on building scalable web applications that deliver
+                exceptional user experiences through clean code, modern design
+                patterns, and performance optimization.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col lg:flex-row gap-6 w-full max-w-2xl">
+            <button
+              onClick={downloadResume}
+              disabled={isDownloading}
+              className="flex items-center justify-center gap-2 px-6 py-3 bg-secondary text-primary rounded-md hover:bg-secondary/90 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-secondary/20"
+            >
+              <FileText className="text-2xl" />
+              {isDownloading ? "Downloading..." : "Download Resume"}
+            </button>
+
+            <div className="flex justify-between gap-4">
+              <a
+                href="https://github.com/abuaslamtech"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center gap-2 px-6 py-3 border-2 border-secondary text-secondary rounded-md hover:bg-secondary hover:text-primary transition-all duration-300 transform hover:scale-105 backdrop-blur-sm"
+              >
+                <Github className="text-2xl" />
+                GitHub
+              </a>
+
+              <a
+                href="https://linkedin.com/in/abuaslamtech"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center gap-2 px-6 py-3 border-2 border-secondary text-secondary rounded-md hover:bg-secondary hover:text-primary transition-all duration-300 transform hover:scale-105 backdrop-blur-sm"
+              >
+                <Linkedin className="text-2xl" />
+                LinkedIn
+              </a>
+            </div>
+          </div>
+
+          {/* Experience indicators */}
+          <div className="flex flex-col md:flex-row flex-wrap gap-4 mt-8">
+            <div className="bg-black/30 backdrop-blur-md rounded-lg px-4 py-3 border border-white/5 flex items-center">
+              <div className="mr-3 w-10 h-10 rounded-full bg-tertiary/20 flex items-center justify-center">
+                <span className="text-secondary font-bold">
+                  <span
+                    className="text-lg inline-block animate-number-drop"
+                    style={{
+                      animation: "numberDrop 0.8s ease-out forwards",
+                    }}
+                  >
+                    <CountUp start={0} end={4} duration={1} /><span>+</span>
+                  </span>
+                </span>
+              </div>
+              <div>
+                <p className="text-xs text-light/70">Years of</p>
+                <p className="text-sm font-medium">Experience</p>
+              </div>
+            </div>
+
+            <div className="bg-black/30 backdrop-blur-md rounded-lg px-4 py-3 border border-white/5 flex items-center">
+              <div className="mr-3 w-10 h-10 rounded-full bg-tertiary/20 flex items-center justify-center">
+              <span className="text-secondary font-bold">
+                  <span
+                    className="text-lg inline-block animate-number-drop"
+                    style={{
+                      animation: "numberDrop 0.8s ease-out forwards",
+                    }}
+                  >
+                    <CountUp start={0} end={20} duration={1} /><span>+</span>
+                  </span>
+                </span>
+              </div>
+              <div>
+                <p className="text-xs text-light/70">Completed</p>
+                <p className="text-sm font-medium">Projects</p>
+              </div>
+            </div>
+
+            <div className="bg-black/30 backdrop-blur-md rounded-lg px-4 py-3 border border-white/5 flex items-center">
+              <div className="mr-3 w-10 h-10 rounded-full bg-tertiary/20 flex items-center justify-center">
+              <span className="text-secondary font-bold">
+                  <span
+                    className="text-lg inline-block animate-number-drop"
+                    style={{
+                      animation: "numberDrop 0.8s ease-out forwards",
+                    }}
+                  >
+                    <CountUp start={0} end={10} duration={1} /><span>+</span>
+                  </span>
+                </span>
+              </div>
+              <div>
+                <p className="text-xs text-light/70">Satisfied</p>
+                <p className="text-sm font-medium">Clients</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
     </div>
   );
 }
