@@ -195,10 +195,7 @@ const ProjectCard = ({ project, index }: projectCardType) => {
       className="group relative"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      style={{
-        opacity: 0,
-        animation: `fadeInUp 0.5s ease-out ${animationDelay + 0.2}s forwards`,
-      }}
+      style={{ animationDelay: `${animationDelay}s` }}  
     >
       <div className="bg-lblack/90 backdrop-blur-md rounded-2xl overflow-hidden border border-tertiary/20 shadow-lg transition-all duration-300 hover:shadow-secondary/10 hover:border-tertiary/40">
         {/* Image container */}
