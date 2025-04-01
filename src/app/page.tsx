@@ -19,7 +19,7 @@ export default function Home() {
   const downloadResume = async () => {
     try {
       setIsDownloading(true);
-      const response = await fetch("/assets/resume.pdf");
+      const response = await fetch("/Abdullahi Ismail Resume.pdf");
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
       const link = document.createElement("a");
@@ -157,7 +157,8 @@ export default function Home() {
                       animation: "numberDrop 0.8s ease-out forwards",
                     }}
                   >
-                    <CountUp start={0} end={4} duration={1} /><span>+</span>
+                    <CountUp start={0} end={4} duration={1} />
+                    <span>+</span>
                   </span>
                 </span>
               </div>
@@ -169,14 +170,15 @@ export default function Home() {
 
             <div className="bg-black/30 backdrop-blur-md rounded-lg px-4 py-3 border border-white/5 flex items-center">
               <div className="mr-3 w-10 h-10 rounded-full bg-tertiary/20 flex items-center justify-center">
-              <span className="text-secondary font-bold">
+                <span className="text-secondary font-bold">
                   <span
                     className="text-lg inline-block animate-number-drop"
                     style={{
                       animation: "numberDrop 0.8s ease-out forwards",
                     }}
                   >
-                    <CountUp start={0} end={20} duration={1} /><span>+</span>
+                    <CountUp start={0} end={20} duration={1} />
+                    <span>+</span>
                   </span>
                 </span>
               </div>
@@ -188,14 +190,15 @@ export default function Home() {
 
             <div className="bg-black/30 backdrop-blur-md rounded-lg px-4 py-3 border border-white/5 flex items-center">
               <div className="mr-3 w-10 h-10 rounded-full bg-tertiary/20 flex items-center justify-center">
-              <span className="text-secondary font-bold">
+                <span className="text-secondary font-bold">
                   <span
                     className="text-lg inline-block animate-number-drop"
                     style={{
                       animation: "numberDrop 0.8s ease-out forwards",
                     }}
                   >
-                    <CountUp start={0} end={10} duration={1} /><span>+</span>
+                    <CountUp start={0} end={10} duration={1} />
+                    <span>+</span>
                   </span>
                 </span>
               </div>
