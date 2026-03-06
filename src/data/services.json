@@ -1,0 +1,27 @@
+[
+  {
+    "icon": "💻",
+    "title": "Frontend Development",
+    "desc": "React, Next.js, TailwindCSS — fast, responsive, polished interfaces."
+  },
+  {
+    "icon": "⚙️",
+    "title": "Backend Development",
+    "desc": "Node.js, Express, REST APIs — secure, scalable server-side logic."
+  },
+  {
+    "icon": "🗄️",
+    "title": "Database Design",
+    "desc": "MongoDB schema design, queries, and data architecture."
+  },
+  {
+    "icon": "🌐",
+    "title": "Full-Stack Applications",
+    "desc": "End-to-end MERN apps — from idea to deployed product."
+  },
+  {
+    "icon": "📱",
+    "title": "Mobile Development",
+    "desc": "Cross-platform iOS & Android apps with React Native and Expo."
+  }
+]

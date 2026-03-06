@@ -1,0 +1,56 @@
+[
+  {
+    "id": "climap",
+    "name": "Climap",
+    "tagline": "Health facility locator across Nigeria",
+    "pic": "/assets/climap.png",
+    "demo": "https://cli-map.vercel.app/",
+    "code": "http://github.com/abuaslamtech/climap",
+    "type": "web"
+  },
+  {
+    "id": "impics",
+    "name": "Impics",
+    "tagline": "Image gallery with AI generation",
+    "pic": "/assets/impics.png",
+    "demo": "https://impics.vercel.app/",
+    "code": "https://github.com/Abuaslamtech/impics",
+    "type": "web"
+  },
+  {
+    "id": "talkmute",
+    "name": "Talkmute",
+    "tagline": "Text to sign language translation",
+    "pic": "/assets/talkmute.png",
+    "demo": "https://talkmute-project.vercel.app/",
+    "code": "https://github.com/Abuaslamtech/talkmute-project",
+    "type": "web"
+  },
+  {
+    "id": "dormsdeal",
+    "name": "Dormsdeal",
+    "tagline": "Student accommodation marketplace",
+    "pic": "/assets/dormsdeal.png",
+    "demo": "https://dormsdeal.netlify.app",
+    "code": "https://github.com/abuaslamtech/dormsdeal",
+    "type": "web"
+  },
+  {
+    "id": "classroom",
+    "name": "Classroom",
+    "tagline": "Educational resource sharing platform",
+    "pic": "/assets/classroom.png",
+    "demo": "https://classroomapp.vercel.app/",
+    "code": "https://github.com/abuaslamtech/classroom",
+    "type": "web"
+  },
+  {
+    "id": "xcurrent",
+    "name": "Xcurrent",
+    "tagline": "Currency conversion and exchange",
+    "pic": "/assets/current.png",
+    "demo": "https://xcurrent.netlify.app",
+    "code": "https://github.com/abuaslamtech/xcurrent",
+    "type": "web"
+  }
+]

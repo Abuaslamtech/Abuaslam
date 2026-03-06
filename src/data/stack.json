@@ -1,0 +1,62 @@
+[
+  {
+    "icon": "react",
+    "name": "React",
+    "desc": "Primary UI framework",
+    "since": "2021"
+  },
+  {
+    "icon": "nextjs",
+    "name": "Next.js",
+    "desc": "Full-stack React framework",
+    "since": "2022"
+  },
+  {
+    "icon": "nodejs",
+    "name": "Node.js",
+    "desc": "Backend runtime",
+    "since": "2021"
+  },
+  {
+    "icon": "mongodb",
+    "name": "MongoDB",
+    "desc": "NoSQL database of choice",
+    "since": "2021"
+  },
+  {
+    "icon": "typescript",
+    "name": "TypeScript",
+    "desc": "Type-safe JavaScript",
+    "since": "2022"
+  },
+  {
+    "icon": "tailwind",
+    "name": "TailwindCSS",
+    "desc": "Utility-first styling",
+    "since": "2022"
+  },
+  {
+    "icon": "express",
+    "name": "Express",
+    "desc": "Minimal Node.js framework",
+    "since": "2022"
+  },
+  {
+    "icon": "git",
+    "name": "Git / GitHub",
+    "desc": "Version control & collaboration",
+    "since": "2020"
+  },
+  {
+    "icon": "reactnative",
+    "name": "React Native",
+    "desc": "Cross-platform mobile apps",
+    "since": "2024"
+  },
+  {
+    "icon": "expo",
+    "name": "Expo",
+    "desc": "Mobile dev toolchain",
+    "since": "2024"
+  }
+]
