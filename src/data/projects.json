@@ -1,56 +1,64 @@
 [
   {
+    "id": "scath",
+    "name": "Scath",
+    "tagline": "Fintech Super App — Live on Google Play & TestFlight",
+    "role": "Client Project · Contracted Lead Developer",
+    "description": "Commissioned fintech platform. Contracted as the lead full-stack engineer to architect and build the complete system from scratch: React Native/Expo mobile app, NestJS API, Safe Haven MFB banking integration, CBN-compliant KYC verification (Tier 1–3, BVN/NIN), and DigitalOcean cloud infrastructure.",
+    "pic": "/assets/scath/scath-1.jpg",
+    "demo": "https://play.google.com/store/apps/details?id=com.scath.app",
+    "playStoreUrl": "https://play.google.com/store/apps/details?id=com.scath.app",
+    "type": "mobile",
+    "platform": "Android & iOS",
+    "status": "Client Project · Google Play",
+    "badges": ["Client Project", "Fintech", "Safe Haven MFB", "CBN KYC", "NestJS", "React Native"],
+    "tech": ["React Native (Expo)", "NestJS", "MySQL", "DigitalOcean", "Nginx", "Docker"],
+    "featured": true
+  },
+  {
+    "id": "billbolt",
+    "name": "BillBolt",
+    "tagline": "SME Sales Recording, Inventory & Accounting App",
+    "role": "Own Product · AtlabX Technologies",
+    "description": "Proprietary bookkeeping and inventory tracking system designed and built for retail shops and SMEs. Features quick barcode sales logging, real-time stock alerts, customer debtor ledgers, and automated PDF invoice generation. Managed on personal approved Google Play Console.",
+    "pic": "/assets/billbolt/billbolt.png",
+    "demo": "#contact",
+    "type": "mobile",
+    "platform": "Android",
+    "status": "Closed Beta · Internal Testing",
+    "badges": ["Own Product", "AtlabX", "Accounting", "React Native", "PostgreSQL"],
+    "tech": ["React Native", "TypeScript", "PostgreSQL", "Android Studio"],
+    "featured": true
+  },
+  {
     "id": "climap",
     "name": "Climap",
-    "tagline": "Health facility locator across Nigeria",
+    "tagline": "Healthcare Facility Geo-Locator & Routing Platform",
+    "role": "Open Web Application",
+    "description": "Geospatial directory and locator mapping verified healthcare centers, hospitals, and clinics across Nigeria with real-time location filtering and provider routing.",
     "pic": "/assets/climap.png",
     "demo": "https://cli-map.vercel.app/",
-    "code": "http://github.com/abuaslamtech/climap",
-    "type": "web"
+    "code": "https://github.com/abuaslamtech/climap",
+    "type": "web",
+    "platform": "Web",
+    "status": "Live Web App",
+    "badges": ["Healthcare", "Next.js", "PostgreSQL", "TypeScript"],
+    "tech": ["Next.js", "TypeScript", "PostgreSQL", "TailwindCSS"]
   },
   {
-    "id": "impics",
-    "name": "Impics",
-    "tagline": "Image gallery with AI generation",
-    "pic": "/assets/impics.png",
-    "demo": "https://impics.vercel.app/",
-    "code": "https://github.com/Abuaslamtech/impics",
-    "type": "web"
-  },
-  {
-    "id": "talkmute",
-    "name": "Talkmute",
-    "tagline": "Text to sign language translation",
-    "pic": "/assets/talkmute.png",
-    "demo": "https://talkmute-project.vercel.app/",
-    "code": "https://github.com/Abuaslamtech/talkmute-project",
-    "type": "web"
-  },
-  {
-    "id": "dormsdeal",
-    "name": "Dormsdeal",
-    "tagline": "Student accommodation marketplace",
-    "pic": "/assets/dormsdeal.png",
-    "demo": "https://dormsdeal.netlify.app",
-    "code": "https://github.com/abuaslamtech/dormsdeal",
-    "type": "web"
-  },
-  {
-    "id": "classroom",
-    "name": "Classroom",
-    "tagline": "Educational resource sharing platform",
-    "pic": "/assets/classroom.png",
-    "demo": "https://classroomapp.vercel.app/",
-    "code": "https://github.com/abuaslamtech/classroom",
-    "type": "web"
-  },
-  {
-    "id": "xcurrent",
-    "name": "Xcurrent",
-    "tagline": "Currency conversion and exchange",
-    "pic": "/assets/current.png",
-    "demo": "https://xcurrent.netlify.app",
-    "code": "https://github.com/abuaslamtech/xcurrent",
-    "type": "web"
+    "id": "eivia",
+    "name": "Eivia",
+    "tagline": "Bills Payment & High-Throughput VTU Platform",
+    "role": "Own Product · AtlabX Technologies",
+    "description": "Developer-friendly value-added service (VAS) and bill payments engine for airtime, data packages, electricity tokens, and TV subscriptions with automated payment webhook reconciliation.",
+    "pic": "/assets/atlabx-logo.png",
+    "demo": "https://atlabx.com",
+    "type": "web",
+    "platform": "Web",
+    "status": "AtlabX Venture",
+    "badges": ["AtlabX Venture", "VTU", "NestJS", "PostgreSQL"],
+    "tech": ["React", "NestJS", "PostgreSQL", "TailwindCSS"]
   }
 ]
+
+

@@ -1,23 +1,41 @@
-import { FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaGitAlt, FaGooglePlay, FaApple } from "react-icons/fa";
 import {
-  SiMongodb,
-  SiExpress,
   SiTailwindcss,
   SiTypescript,
-  SiNativescript,
+  SiNestjs,
+  SiKotlin,
+  SiPostgresql,
+  SiMysql,
+  SiDocker,
+  SiDigitalocean,
+  SiExpo,
+  SiNginx,
+  SiGithubactions,
 } from "react-icons/si";
-import { TbBrandNextjs } from "react-icons/tb";
+import { TbBrandReactNative, TbBrandNextjs } from "react-icons/tb";
+import { MdAccountBalance, MdSecurity } from "react-icons/md";
 import type { ReactNode } from "react";
 
 export const STACK_ICONS: Record<string, ReactNode> = {
   react: <FaReact />,
+  reactnative: <TbBrandReactNative />,
+  expo: <SiExpo />,
+  kotlin: <SiKotlin />,
+  nestjs: <SiNestjs />,
+  postgresql: <SiPostgresql />,
+  mysql: <SiMysql />,
+  typescript: <SiTypescript />,
   nextjs: <TbBrandNextjs />,
   nodejs: <FaNodeJs />,
-  mongodb: <SiMongodb />,
-  typescript: <SiTypescript />,
+  docker: <SiDocker />,
+  digitalocean: <SiDigitalocean />,
+  nginx: <SiNginx />,
+  cicd: <SiGithubactions />,
   tailwind: <SiTailwindcss />,
-  express: <SiExpress />,
   git: <FaGitAlt />,
-  reactnative: <SiNativescript />,
-  expo: <FaReact />,
+  googleplay: <FaGooglePlay />,
+  apple: <FaApple />,
+  fintech: <MdAccountBalance />,
+  compliance: <MdSecurity />,
 };
+

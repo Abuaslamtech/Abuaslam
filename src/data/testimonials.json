@@ -1,17 +1,18 @@
 [
   {
-    "quote": "Abdullahi built our platform from scratch in record time. Clean code, great communication, zero hand-holding needed.",
-    "name": "Ahmed Sule",
-    "role": "Co-founder, EdTech Startup"
+    "quote": "Abdullahi architected and delivered our fintech mobile app with Safe Haven MFB integration in record time. Clean architecture, high security standards, and zero hand-holding required.",
+    "name": "Scath Leadership",
+    "role": "Fintech Client"
   },
   {
-    "quote": "The MERN stack expertise is real. Our app handled 10x traffic after his performance work. Would hire again.",
-    "name": "Fatima Bello",
-    "role": "Product Manager, SaaS Company"
+    "quote": "His deep understanding of NestJS, relational databases, and mobile performance transformed our deployment pipeline. He reduced our production load times significantly.",
+    "name": "Engineering Lead",
+    "role": "QA School"
   },
   {
-    "quote": "Finally a developer who thinks like a designer too. The UI he delivered was better than our mockups.",
-    "name": "Ibrahim Yusuf",
-    "role": "CEO, Digital Agency"
+    "quote": "A rare engineer who masters both mobile UI aesthetics in React Native and robust backend infrastructure on DigitalOcean with automated CI/CD.",
+    "name": "Co-founder",
+    "role": "Aeko Web3"
   }
 ]
+

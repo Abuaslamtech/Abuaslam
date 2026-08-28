@@ -1,62 +1,87 @@
 [
   {
-    "icon": "react",
-    "name": "React",
-    "desc": "Primary UI framework",
-    "since": "2021"
+    "icon": "reactnative",
+    "name": "React Native & Expo",
+    "desc": "Production cross-platform mobile apps for Android & iOS",
+    "category": "Mobile",
+    "since": "2024"
   },
   {
-    "icon": "nextjs",
-    "name": "Next.js",
-    "desc": "Full-stack React framework",
-    "since": "2022"
+    "icon": "kotlin",
+    "name": "Kotlin / Android",
+    "desc": "Native Android development, Android Studio & Play Console",
+    "category": "Mobile",
+    "since": "2024"
   },
   {
-    "icon": "nodejs",
-    "name": "Node.js",
-    "desc": "Backend runtime",
-    "since": "2021"
+    "icon": "nestjs",
+    "name": "NestJS",
+    "desc": "Scalable enterprise Node.js microservices & REST APIs",
+    "category": "Backend",
+    "since": "2024"
   },
   {
-    "icon": "mongodb",
-    "name": "MongoDB",
-    "desc": "NoSQL database of choice",
-    "since": "2021"
+    "icon": "postgresql",
+    "name": "PostgreSQL",
+    "desc": "Primary relational database, schema design & TypeORM",
+    "category": "Database",
+    "since": "2023"
+  },
+  {
+    "icon": "mysql",
+    "name": "MySQL",
+    "desc": "Managed relational database for production fintech systems",
+    "category": "Database",
+    "since": "2023"
   },
   {
     "icon": "typescript",
     "name": "TypeScript",
-    "desc": "Type-safe JavaScript",
+    "desc": "End-to-end type safety across mobile, backend & web",
+    "category": "Core",
     "since": "2022"
   },
   {
-    "icon": "tailwind",
-    "name": "TailwindCSS",
-    "desc": "Utility-first styling",
-    "since": "2022"
-  },
-  {
-    "icon": "express",
-    "name": "Express",
-    "desc": "Minimal Node.js framework",
-    "since": "2022"
-  },
-  {
-    "icon": "git",
-    "name": "Git / GitHub",
-    "desc": "Version control & collaboration",
-    "since": "2020"
-  },
-  {
-    "icon": "reactnative",
-    "name": "React Native",
-    "desc": "Cross-platform mobile apps",
+    "icon": "digitalocean",
+    "name": "DigitalOcean & Cloud",
+    "desc": "Production Linux droplets, managed databases & firewalls",
+    "category": "DevOps",
     "since": "2024"
   },
   {
-    "icon": "expo",
-    "name": "Expo",
-    "desc": "Mobile dev toolchain",
+    "icon": "docker",
+    "name": "Docker & Containers",
+    "desc": "Containerized backend deployment & environment isolation",
+    "category": "DevOps",
     "since": "2024"
+  },
+  {
+    "icon": "nginx",
+    "name": "Nginx & SSL",
+    "desc": "Reverse proxy, rate limiting, and automated SSL (Certbot)",
+    "category": "DevOps",
+    "since": "2024"
+  },
+  {
+    "icon": "cicd",
+    "name": "GitHub Actions CI/CD",
+    "desc": "Automated build, test, and production deployment pipelines",
+    "category": "DevOps",
+    "since": "2024"
+  },
+  {
+    "icon": "fintech",
+    "name": "Fintech & Banking APIs",
+    "desc": "Safe Haven MFB, Monnify, CBN KYC Tiering & NIBSS sync",
+    "category": "Fintech",
+    "since": "2025"
+  },
+  {
+    "icon": "nextjs",
+    "name": "Next.js & React",
+    "desc": "High-performance full-stack web applications",
+    "category": "Frontend",
+    "since": "2022"
   }
 ]
+

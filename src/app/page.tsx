@@ -17,10 +17,10 @@ export default function Home() {
   const testimonials = getTestimonials();
 
   return (
-    <div className="min-h-screen bg-bg text-ink font-body selection:bg-primary/30 selection:text-ink justify-center items-center">
+    <div className="min-h-screen bg-bg text-ink font-body selection:bg-accent/30 selection:text-white relative overflow-x-hidden">
       <Navbar />
 
-      <main className="flex-1 justify-center justify-self-end items-center">
+      <main className="flex-1 w-full">
         <Hero />
         <About />
         <Projects projects={projects} />
@@ -34,3 +34,4 @@ export default function Home() {
     </div>
   );
 }
+
