@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/*"
+  to = "https://abuaslam.atlabx.com/:splat"
+  status = 301
+  force = true
